@@ -60,7 +60,7 @@ const serverConfig = {
   mode: "production",
   entry: "./src/server.js",
   target: "node",
-  externals: [nodeExternals()],
+  externals: [nodeExternals(), "react-helmet"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js"
@@ -92,7 +92,7 @@ const serverConfig = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        {from: './public/react.svg'}
+        {from: './public/favicon.svg'}
       ]
     })
   ],
