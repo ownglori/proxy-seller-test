@@ -1,4 +1,4 @@
-import {compactAlbumData, compactPostData, fetchError} from "@/helpers";
+import {compactAlbumData, compactPostData, fetchError, formatComments} from "@/helpers";
 
 
 export const getUsers = () => {
@@ -20,6 +20,7 @@ export const getPostData = (postId) => {
 
   const comments = fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
     .then(response => response.json())
+    .then(data => formatComments(data))
     .catch(error => fetchError(error));
 
   return Promise.all([post, comments])

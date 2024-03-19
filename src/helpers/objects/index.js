@@ -25,3 +25,9 @@ export const compactAlbumData = (data) => {
 
   return {...album, photos: photos};
 };
+
+export const formatComments = (data) => {
+  return data.map((comment) => {
+    return {...comment, body: comment.body.replace(/\n/g, "<br/>")};
+  });
+}

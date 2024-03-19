@@ -8,9 +8,7 @@ export const CommentComponent = ({comment}) => {
         <h5 className="card-title">
           {comment.name}
         </h5>
-        <p className="card-text">
-          {comment.body}
-        </p>
+        <p className="card-text" dangerouslySetInnerHTML={{__html: comment.body}}/>
       </div>
     </div>
   );
