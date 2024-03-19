@@ -25,7 +25,7 @@ export const Posts = ({fetchInitialData, data}) => {
   useEffect(fetchData, [userId]);
 
   if (loading) {
-    return <Loading/>
+    return <Loading/>;
   }
 
   return (

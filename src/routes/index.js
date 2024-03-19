@@ -1,5 +1,5 @@
-import {Home, Posts} from "@/pages";
-import {getPostsByUserId, getUsers} from "@/api";
+import {Home, Post, Posts} from "@/pages";
+import {getPostData, getPostsByUserId, getUsers} from "@/api";
 
 
 export const routes = [
@@ -12,5 +12,10 @@ export const routes = [
     path: "/posts/:userId",
     component: Posts,
     fetchInitialData: (path) => getPostsByUserId(path.split("/").pop())
+  },
+  {
+    path: "/post/:postId",
+    component: Post,
+    fetchInitialData: (path) => getPostData(path.split("/").pop())
   }
 ];

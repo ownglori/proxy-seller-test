@@ -13,3 +13,10 @@ export const sortAscByUserId = (users) => {
 export const filterByUserName = (users, filter) => {
   return [...users].filter(a => a.username.toLowerCase().startsWith(filter.toLowerCase()));
 };
+
+export const compactPostData = (data) => {
+  const [post, comments] = data;
+
+  return {...post, body: post.body.replace(/\n/g, "<br/>"), comments: comments};
+};
+
