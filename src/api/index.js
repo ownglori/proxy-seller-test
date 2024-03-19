@@ -26,3 +26,9 @@ export const getPostData = (postId) => {
     .then(response => compactPostData(response))
     .catch(error => fetchError(error));
 }
+
+export const getAlbumsByUserId = (userId) => {
+  return fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`)
+    .then(response => response.json())
+    .catch(error => fetchError(error));
+}
