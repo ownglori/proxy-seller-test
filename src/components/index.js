@@ -1,3 +1,5 @@
+export * from "@/components/Album";
+export * from "@/components/Albums";
 export * from "@/components/App";
 export * from "@/components/Comment";
 export * from "@/components/Comments";
