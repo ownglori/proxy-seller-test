@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Helmet} from "react-helmet";
 import {Loading, UsersComponent} from "@/components";
-import {fetchError, filterByUserName, sortAscByUserId, sortAscByUserName, sortDescByUserName} from "@/helpers";
+import {fetchError, sortAscByUserId, sortAscByUserName, sortDescByUserName, filterByUserName} from "@/helpers";
 
 
 export const Home = ({fetchInitialData, data}) => {
@@ -62,6 +62,7 @@ export const Home = ({fetchInitialData, data}) => {
         <meta name="description" content="Home users description"/>
       </Helmet>
       <div className="py-3">
+        <h1>Users</h1>
         <div className="row g-3 mb-3">
           <div className="col-12 col-sm-6 col-md-8 col-lg-6">
             <input className="form-control" type="text" placeholder="Search user by username" onChange={searchUser}/>

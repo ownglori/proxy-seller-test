@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import {Loading, PhotosComponent} from "@/components";
@@ -36,7 +36,7 @@ export const Album = ({fetchInitialData, data}) => {
       </Helmet>
       <div className="py-3">
         <h1>
-          {album.title}
+          Album: {album.title}
         </h1>
         <h2>Photos</h2>
         <PhotosComponent photos={album.photos}/>

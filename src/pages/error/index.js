@@ -6,10 +6,10 @@ export const Error = () => {
   return (
     <>
       <Helmet>
-        <title>Application Error title</title>
-        <meta name="description" content="Application Error description"/>
+        <title>Not Found</title>
+        <meta name="description" content="Not Found"/>
       </Helmet>
-      <div>Application Error</div>
+      <div className="p-3 text-uppercase text-center">404 | Not found</div>
     </>
   );
 };

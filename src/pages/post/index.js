@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import {CommentsComponent, Loading} from "@/components";
+import {Loading, CommentsComponent} from "@/components";
 import {fetchError} from "@/helpers";
 
 
@@ -36,7 +36,7 @@ export const Post = ({fetchInitialData, data}) => {
       </Helmet>
       <div className="py-3">
         <h1>
-          {post.title}
+          Post: {post.title}
         </h1>
         <p dangerouslySetInnerHTML={{__html: post.body}}/>
         <h2>Comments</h2>

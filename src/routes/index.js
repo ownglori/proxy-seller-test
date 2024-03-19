@@ -1,5 +1,5 @@
-import {Album, Albums, Home, Post, Posts} from "@/pages";
-import {getAlbumData, getAlbumsByUserId, getPostData, getPostsByUserId, getUsers} from "@/api";
+import {Home, Posts, Post, Albums, Album} from "@/pages";
+import {getUsers, getPostsByUserId, getPostData, getAlbumsByUserId, getAlbumData} from "@/api";
 
 
 export const routes = [

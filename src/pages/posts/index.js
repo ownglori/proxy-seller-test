@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import {Loading, PostsComponent} from "@/components";
@@ -35,6 +35,7 @@ export const Posts = ({fetchInitialData, data}) => {
         <meta name="description" content="Posts by user description"/>
       </Helmet>
       <div className="py-3">
+        <h1>Posts</h1>
         <PostsComponent posts={posts}/>
       </div>
     </>

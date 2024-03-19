@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import {AlbumsComponent, Loading} from "@/components";
+import {Loading, AlbumsComponent} from "@/components";
 import {fetchError} from "@/helpers";
 
 
@@ -35,6 +35,7 @@ export const Albums = ({fetchInitialData, data}) => {
         <meta name="description" content="Albums by user description"/>
       </Helmet>
       <div className="py-3">
+        <h1>Albums</h1>
         <AlbumsComponent albums={albums}/>
       </div>
     </>

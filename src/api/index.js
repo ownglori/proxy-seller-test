@@ -1,4 +1,4 @@
-import {compactAlbumData, compactPostData, fetchError, formatComments} from "@/helpers";
+import {fetchError, formatComments, compactPostData, compactAlbumData} from "@/helpers";
 
 
 export const getUsers = () => {
