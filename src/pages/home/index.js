@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Helmet} from "react-helmet";
-import {Loading, Users} from "@/components";
+import {Loading, UsersComponent} from "@/components";
 import {fetchError, filterByUserName, sortAscByUserId, sortAscByUserName, sortDescByUserName} from "@/helpers";
 
 
@@ -74,7 +74,7 @@ export const Home = ({fetchInitialData, data}) => {
             </select>
           </div>
         </div>
-        <Users users={search.status ? search.users : users}/>
+        <UsersComponent users={search.status ? search.users : users}/>
       </div>
     </>
   );

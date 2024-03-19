@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 
-export const User = ({user}) => {
+export const UserComponent = ({user}) => {
   return (
     <div className="card">
       <div className="card-body">
