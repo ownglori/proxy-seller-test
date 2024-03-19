@@ -1,4 +1,6 @@
 export * from "@/components/App";
+export * from "@/components/Comment";
+export * from "@/components/Comments";
 export * from "@/components/Header";
 export * from "@/components/Layout";
 export * from "@/components/Loading";

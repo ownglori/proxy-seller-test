@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import {Loading} from "@/components";
+import {CommentsComponent, Loading} from "@/components";
 import {fetchError} from "@/helpers";
 
 
 export const Post = ({fetchInitialData, data}) => {
-  const [post, setPost] = useState(__isClient__ ? [] : data);
+  const [post, setPost] = useState(__isClient__ ? {comments: []} : data);
   const [loading, setLoading] = useState(!post);
 
   const {postId} = useParams();
@@ -40,6 +40,7 @@ export const Post = ({fetchInitialData, data}) => {
         </h1>
         <p dangerouslySetInnerHTML={{__html: post.body}}/>
         <h2>Comments</h2>
+        <CommentsComponent comments={post.comments}/>
       </div>
     </>
   );
