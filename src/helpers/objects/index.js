@@ -20,3 +20,8 @@ export const compactPostData = (data) => {
   return {...post, body: post.body.replace(/\n/g, "<br/>"), comments: comments};
 };
 
+export const compactAlbumData = (data) => {
+  const [album, photos] = data;
+
+  return {...album, photos: photos};
+};

@@ -1,4 +1,4 @@
-import {compactPostData, fetchError} from "@/helpers";
+import {compactAlbumData, compactPostData, fetchError} from "@/helpers";
 
 
 export const getUsers = () => {
@@ -30,5 +30,19 @@ export const getPostData = (postId) => {
 export const getAlbumsByUserId = (userId) => {
   return fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`)
     .then(response => response.json())
+    .catch(error => fetchError(error));
+}
+
+export const getAlbumData = (albumId) => {
+  const album = fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}`)
+    .then(response => response.json())
+    .catch(error => fetchError(error));
+
+  const photos = fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`)
+    .then(response => response.json())
+    .catch(error => fetchError(error));
+
+  return Promise.all([album, photos])
+    .then(response => compactAlbumData(response))
     .catch(error => fetchError(error));
 }

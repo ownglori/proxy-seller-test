@@ -1,3 +1,4 @@
+export * from "@/pages/album";
 export * from "@/pages/albums";
 export * from "@/pages/error";
 export * from "@/pages/home";
