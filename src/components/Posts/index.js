@@ -7,7 +7,7 @@ export const PostsComponent = ({posts}) => {
     return (
       <div className="row g-3">
         <div className="col-12">
-          <h5>Users not found</h5>
+          <h5>Posts not found</h5>
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import {Loading} from "@/components";
+import {Loading, PhotosComponent} from "@/components";
 import {fetchError} from "@/helpers";
 
 
@@ -39,6 +39,7 @@ export const Album = ({fetchInitialData, data}) => {
           {album.title}
         </h1>
         <h2>Photos</h2>
+        <PhotosComponent photos={album.photos}/>
       </div>
     </>
   );
